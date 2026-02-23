@@ -11,6 +11,8 @@ def on_focus_in(event):
         search_entry.delete(0, "end")
         search_entry.config(fg="white")
 
+
+
 def on_focus_out(event):
     if search_entry.get() == "":
         search_entry.insert(0, "Type URL or Search...")

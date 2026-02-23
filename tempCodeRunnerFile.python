@@ -1,0 +1,33 @@
+from tkinter import *
+root = Tk()
+root.geometry("300x350")
+mybutton = Button(root, text="my button", fg="black", bg="yellow", font=("Arial", 12, "bold"))
+mybutton.pack(pady=5)
+mylabel = Label(root, text="This is my NEW label",bg="#c6ade6", font=("Arial", 12, "bold"))     
+mylabel.pack(pady=5)
+
+myentry = Entry(root, width=20)
+myentry.pack(pady=5)
+mytext = Text(root, width=20, height=5)
+mytext.pack(pady=5)
+mygroup = StringVar()
+mygroup.set("check1")   
+frame_radio = Frame(root)
+frame_radio.pack(pady=5)
+
+myoption1 = Radiobutton(frame_radio,  text="Option A",  variable=mygroup,  value="A",font=("Arial", 12, "bold"),fg="blue")
+myoption1.pack(side=LEFT, padx=10)
+myoption2 = Radiobutton(frame_radio, text="Option B", variable=mygroup, value="B",font=("Arial", 12, "bold"),fg="green")
+myoption2.pack(side=LEFT, padx=10)
+
+mycheckbox = Checkbutton(root, text="Check me", font=("Arial", 11, "bold"))
+mycheckbox.pack(pady=5)
+
+myoptions = Listbox(root)
+myoptions.pack(pady=10)
+myoptions.insert(1, "Option 1")
+myoptions.insert(2, "Option 2")
+myoptions.insert(3, "Option 3")
+myoptions.config(font="consolas")
+
+root.mainloop()
